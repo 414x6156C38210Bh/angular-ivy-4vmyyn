@@ -204,8 +204,64 @@ servers.component.ts
     })
     export class ServersComponent implement OnInit {
         constructor() {}
-
         ngOnInit() {}
     }
 
-22. 
+22. Component selector
+The component selector follows the same rules as the CSS selectors.
+servers.component.ts
+    @Component ({
+        selector:'app-servers',
+        // selector:'[app-servers]',
+        // selector:'.app-servers',
+        templateUrl: './app-servers.component.html',
+        // styleUrls: ['./servers.component.css'
+        styles: [`
+            h3 {
+                color: dodgeblue;
+            }
+        `]
+    })
+    export class ServersComponent implement OnInit {
+        constructor() {}
+        ngOnInit() {}
+    }
+app.component.html
+    <app-servers></app-servers>
+    <!-- <div app-servers></div> -->
+    <!-- <div class="app-servers"></div> -->
+
+24. What is data binding 
+TypeScrip code (business logic) <- data binding-> Template (HTML)
+Data binding types:
+    Output data:
+        String Interpolation: {{ data }}
+        Property binding: [property]="data"
+    React to User Events:
+        Event binding:
+            (event)="expression"
+    Two-way-binding:
+        [(ngModel)]="data"
+
+25. String Interpolation   
+server.component.ts    
+    serverId = 10;
+    getServerStatus() {
+        return 'offline';
+    }
+server.component.html
+    The server {{ serverId }} is {{ getServerStatus() }}.
+
+26. Property binding
+servers.component.html 
+    <button class="btn btn-primary"
+        [disabled]="!allowNewServer">Add Button</button>     
+server.component.ts
+    allowNewServer  false;
+    constructor () {
+        setTimeout( () => {                      //ES6 arrow function
+            this.allowNewServer = true;
+        } , 2000)
+    }
+
+27. 
