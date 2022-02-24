@@ -427,3 +427,24 @@ Components:
 Models:
     Ingredient
     
+45. Empty class project
+Add Bootstrap css framework.
+npm install --save bootstrap  --> install the latest Bootstrap 
+.angular-cli.json  
+    "apps": [
+        {
+            "styles": {
+                "../node_modules/bootstrap/dist/css/bootstrap.min.css", ---> add the Bootstrap css
+                "styles.css"
+            }
+        }
+    ]    
+app.component.html
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+            <h2>Bootstrap is working here</h2>
+            </div>
+        </div>
+    </div>
+
