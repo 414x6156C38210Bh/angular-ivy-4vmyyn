@@ -403,3 +403,27 @@ servers.component.ts
 servers.component.ts
     <app-server *ngFor="let server of servers"></app-server>
 
+42. Getting the index when using *ngFor
+app.component.html
+    <div *ngFor="let logItem of log; let i = index"
+        [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+        [ngClass]="{'white-text': i >= 4}"
+    >{{ logItem }}</div>
+
+43. Course project
+44. Planning the application
+Features and components: 
+    Shopping List
+        Shopping list
+        Shopping list edit
+    Recipe Book    
+        Recipe list 
+        Recipes component
+            Recipe item
+            Recipe detail
+Components:
+    Root 
+    Header 
+Models:
+    Ingredient
+    
