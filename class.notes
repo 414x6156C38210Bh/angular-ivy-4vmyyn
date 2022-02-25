@@ -2,6 +2,7 @@
 
 Angular new projects
 npm install -g @angular/cli
+ng version
 ng new my-dream-app
 cd my-dream-app
 ng serve
@@ -426,7 +427,7 @@ Components:
     Header 
 Models:
     Ingredient
-    
+
 45. Empty class project
 Add Bootstrap css framework.
 npm install --save bootstrap  --> install the latest Bootstrap 
@@ -447,4 +448,12 @@ app.component.html
             </div>
         </div>
     </div>
+
+47. Adding the components
+ng g c recipes --skipTests true
+ng g c recipes/recipe-list --skipTests true
+
+48.Using the components
+
+49. Adding a navigation bar 
 
